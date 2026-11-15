@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>JSK UniCar Szczecin - wynajem aut i przewozy z kierowcą</title>
+<meta name="description" content="JSK UniCar Logistyk ze Szczecina: wynajem samochodów na doby i miesiące, wyjazdy serwisowe do portów w całej Europie i wyjazdy firmowe z kierowcą, 24 h na dobę.">
+<meta name="theme-color" content="#26348B">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" fetchpriority="high" type="image/webp" href="img/hero-m-800.webp" media="(max-width:760px)" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-800.webp 800w" imagesizes="100vw">
+<link rel="preload" as="image" fetchpriority="high" type="image/webp" href="img/hero-1600.webp" media="(min-width:761px)" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" imagesizes="100vw">
+<link rel="preload" as="font" type="font/woff2" href="fonts/bss-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/archivo-latin-400.woff2" crossorigin>
+<style>
+@font-face{font-family:"BS Stencil";font-weight:700;font-display:swap;src:url(fonts/bss-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"BS Stencil";font-weight:700;font-display:swap;src:url(fonts/bss-latin-ext.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1EFF,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Archivo";font-weight:400;font-display:swap;src:url(fonts/archivo-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Archivo";font-weight:400;font-display:swap;src:url(fonts/archivo-latin-ext-400.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1EFF,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Archivo";font-weight:600;font-display:swap;src:url(fonts/archivo-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Archivo";font-weight:600;font-display:swap;src:url(fonts/archivo-latin-ext-600.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1EFF,U+2C60-2C7F,U+A720-A7FF}
+:root{--navy:#26348B;--navy-d:#18215E;--ink:#141A3A;--txt:#2B3150;--mut:#5A6080;--line:#989BB8;--bg2:#EEF0F5;--w:#fff;--hh:76px;--wrap:min(1240px,calc(100% - 48px))}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 "Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--txt);background:var(--w);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--navy)}
+h1,h2,h3{font-family:"BS Stencil","Archivo",sans-serif;font-weight:700;color:var(--ink);line-height:1.02;margin:0;letter-spacing:0}
+h2{font-size:clamp(40px,4.3vw,64px)}
+h3{font-size:clamp(26px,2.3vw,34px)}
+p{margin:0 0 1em}
+.wrap{width:var(--wrap);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:4px;font:600 17px/1 "Archivo",sans-serif;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s}
+.btn-n{background:var(--navy);color:#fff}.btn-n:hover{background:var(--navy-d)}
+.btn-w{background:#fff;color:var(--navy)}.btn-w:hover{background:var(--bg2)}
+.btn .str{width:26px;height:10px;flex:none}
+.ico{width:18px;height:18px;flex:none}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;height:var(--hh);border-bottom:1px solid #E3E5EE}
+.top .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.logo{display:block;flex:none}
+.logo img{height:60px;width:auto}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{font-weight:600;font-size:15.5px;color:var(--ink);text-decoration:none;padding:6px 0;position:relative;white-space:nowrap}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+.tel{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--navy);text-decoration:none;white-space:nowrap;font-size:16px}
+.top .btn{min-height:46px;padding:0 20px;font-size:15.5px}
+.burger{display:none;width:46px;height:46px;border:1px solid #D7DAE6;background:#fff;border-radius:4px;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);transition:transform .2s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.open .burger span{background:transparent}.open .burger span::before{transform:translateY(6px) rotate(45deg)}.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+.telbtn{display:none}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--hh));display:flex;align-items:center;overflow:hidden;background:var(--navy-d)}
+.hero-foto{position:absolute;inset:0;margin:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,23,66,.88) 0%,rgba(17,23,66,.72) 34%,rgba(17,23,66,.18) 62%,rgba(17,23,66,0) 80%),linear-gradient(0deg,rgba(17,23,66,.35),rgba(17,23,66,0) 30%)}
+.hero-in{position:relative;z-index:2;width:var(--wrap);margin:0 auto;padding:56px 0 120px}
+.hero-txt{max-width:640px}
+.hero h1{color:#fff;font-size:clamp(54px,6vw,108px)}
+.hero .lead{color:#E4E7F4;font-size:clamp(18px,1.35vw,21px);line-height:1.55;margin:22px 0 32px;max-width:560px}
+.hero .info{color:#C3C8E2;font-size:15px;margin:22px 0 0;max-width:520px}
+.dach{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(52px,7vw,104px);z-index:3;display:block}
+.dach .lin{fill:none;stroke:var(--navy);stroke-width:3;vector-effect:non-scaling-stroke}
+.dach .smuga{fill:none;stroke:var(--line);stroke-width:2;vector-effect:non-scaling-stroke;stroke-linecap:round}
+
+/* sekcje */
+section{position:relative}
+.sek{padding:clamp(72px,8vw,120px) 0}
+.sek-g{background:var(--bg2)}
+.glowa{max-width:720px;margin-bottom:44px}
+.glowa p{color:var(--mut);font-size:18px;margin-top:16px}
+.kreska{display:block;width:120px;height:18px;margin:0 0 18px}
+.kreska path{fill:none;stroke:var(--navy);stroke-width:3;stroke-linecap:round}
+.kreska .s2{stroke:var(--line);stroke-width:2}
+
+/* wynajem */
+.wyn{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,4vw,64px);align-items:start}
+.cennik{width:100%;border-collapse:collapse;font-size:16px}
+.cennik th{font:600 13.5px/1.3 "Archivo",sans-serif;color:var(--mut);text-align:right;padding:0 12px 14px;border-bottom:2px solid var(--navy);white-space:nowrap}
+.cennik th:first-child{text-align:left;padding-left:0}
+.cennik td{padding:17px 12px;border-bottom:1px solid #E1E3EC;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cennik td:first-child{text-align:left;padding-left:0;white-space:normal}
+.cennik td b{display:block;color:var(--ink);font-size:17px}
+.cennik td small{color:var(--mut);font-size:14px}
+.cennik td.m{font-weight:600;color:var(--navy)}
+.cennik tr:hover td{background:#F6F7FB}
+.uwagi{display:flex;flex-wrap:wrap;gap:8px 28px;margin:22px 0 0;color:var(--mut);font-size:15px}
+.uwagi b{color:var(--ink)}
+.wyn-foto{margin:0;position:relative}
+.wyn-foto img{width:100%;aspect-ratio:1000/565;object-fit:cover;border-radius:4px}
+.wyn-foto figcaption{font-size:14.5px;color:var(--mut);margin-top:12px}
+.rez{margin-top:28px;padding:26px 28px;background:var(--bg2);border-radius:4px}
+.rez p{margin:0 0 14px;font-size:16px}
+.rez .btn{width:100%}
+
+/* przewozy - ciemna */
+.ciem{background:var(--navy-d);color:#D9DDF0;overflow:hidden}
+.ciem h2,.ciem h3{color:#fff}
+.ciem .glowa p{color:#BFC5E3}
+.ciem .kreska path{stroke:#fff}.ciem .kreska .s2{stroke:var(--line)}
+.smugi{position:absolute;right:-40px;top:70px;width:min(560px,48vw);height:auto;opacity:.5;pointer-events:none}
+.smugi path{fill:none;stroke:var(--line);stroke-linecap:round}
+.prz{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.4vw,56px)}
+.prz article{min-width:0}
+.prz figure{margin:0 0 26px;overflow:hidden;border-radius:4px}
+.prz figure img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s}
+.prz article:hover figure img{transform:scale(1.03)}
+.prz h3{margin-bottom:14px}
+.prz p{font-size:17px;color:#D0D5EC}
+.doba{margin-top:clamp(48px,5vw,72px);padding-top:36px;border-top:1px solid rgba(152,155,184,.4);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.doba p{margin:0;font-size:clamp(20px,1.8vw,26px);color:#fff;max-width:760px;line-height:1.4}
+.doba p span{color:#BFC5E3;display:block;font-size:17px;margin-top:6px}
+
+/* galeria */
+.gal-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px}
+.gal-top .glowa{margin:0}
+.strz{display:flex;gap:10px;flex:none}
+.strz button{width:52px;height:52px;border-radius:4px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.strz button:hover{background:var(--navy);color:#fff}
+.strz svg{width:22px;height:14px}
+.pas{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;padding-bottom:4px}
+.pas::-webkit-scrollbar{display:none}
+.pas.drag{cursor:grabbing;scroll-snap-type:none}
+.pas button{flex:none;height:clamp(240px,26vw,360px);padding:0;border:0;background:#dfe2ea;border-radius:4px;overflow:hidden;scroll-snap-align:start;cursor:zoom-in}
+.pas img{height:100%;width:auto;max-width:none;pointer-events:none;user-select:none}
+.gal-p{font-size:14.5px;color:var(--mut);margin:18px 0 0}
+
+/* kontakt + formularz */
+.kon{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,5vw,80px);align-items:start}
+.dane{margin-top:8px}
+.dane dl{margin:0;display:grid;gap:22px}
+.dane dt{font-size:14px;color:var(--mut);margin-bottom:4px}
+.dane dd{margin:0;font-size:18px;color:var(--ink)}
+.dane dd a{font-weight:600;text-decoration:none}
+.dane dd a.duzy{font-family:"BS Stencil",sans-serif;font-weight:400;font-size:clamp(34px,3.2vw,46px);line-height:1.05;color:var(--navy)}
+.dane dd small{display:block;color:var(--mut);font-size:15px;margin-top:2px}
+.form{background:var(--bg2);padding:clamp(24px,3vw,44px);border-radius:4px;position:relative}
+.form h3{margin-bottom:6px}
+.form>p{color:var(--mut);font-size:16px}
+.pola{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;margin-top:20px}
+.pole{display:flex;flex-direction:column;gap:6px;min-width:0}
+.pole.c{grid-column:1/-1}
+.pole label{font-size:14px;font-weight:600;color:var(--ink)}
+.pole input,.pole select,.pole textarea{width:100%;font:16px/1.4 "Archivo",sans-serif;color:var(--ink);background:#fff;border:1.5px solid #CDD1DF;border-radius:4px;padding:13px 14px;min-height:50px}
+.pole textarea{min-height:110px;resize:vertical}
+.pole input:focus,.pole select:focus,.pole textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(38,52,139,.15)}
+.typ{display:flex;flex-wrap:wrap;gap:8px}
+.typ label{position:relative;cursor:pointer}
+.typ input{position:absolute;opacity:0;pointer-events:none}
+.typ span{display:inline-block;padding:11px 16px;border:1.5px solid #CDD1DF;border-radius:4px;background:#fff;font-size:15px;font-weight:600;color:var(--txt);transition:all .15s}
+.typ input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+.typ input:focus-visible+span{outline:2px solid var(--navy);outline-offset:2px}
+.zgoda{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--mut);grid-column:1/-1}
+.zgoda input{width:20px;height:20px;margin:2px 0 0;flex:none;accent-color:var(--navy)}
+.form .btn{grid-column:1/-1;width:100%;margin-top:4px}
+.ok{display:none;margin-top:16px;padding:14px 16px;background:#fff;border-left:3px solid var(--navy);font-size:15px}
+.ok.on{display:block}
+
+/* o firmie */
+.fir{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,80px);align-items:center}
+.fir-dane{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:16px;margin:24px 0 0}
+.fir-dane dt{color:var(--mut)}
+.fir-dane dd{margin:0;color:var(--ink);font-weight:600}
+.sport{background:#fff;border-radius:4px;padding:clamp(26px,3vw,40px)}
+.sport p{color:var(--mut);font-size:16px}
+.kluby{display:flex;gap:28px;align-items:center;margin-top:20px;flex-wrap:wrap}
+.kluby a{display:block}
+.kluby img{height:120px;width:auto}
+.mapa{margin-top:clamp(48px,5vw,72px);height:clamp(280px,32vw,420px);background:#dfe2ea;border-radius:4px;overflow:hidden;position:relative}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.mapa .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:15px}
+
+/* stopka */
+.stopka{background:var(--ink);color:#B4B9D3;padding:64px 0 28px;font-size:15px}
+.st-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.stopka img{height:54px;width:auto;margin-bottom:16px}
+.stopka h4{font:600 15px/1.3 "Archivo",sans-serif;color:#fff;margin:0 0 12px}
+.stopka a{color:#DDE0EF;text-decoration:none}
+.stopka a:hover{color:#fff}
+.stopka ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.stopka p{margin:0 0 6px}
+.st-dol{margin-top:44px;padding-top:22px;border-top:1px solid rgba(180,185,211,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px}
+
+/* pasek dolny tel */
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #E1E3EC;transform:translateY(110%);transition:transform .25s}
+.mob.widac{transform:none}
+.mob a{flex:1;min-height:50px;font-size:16px;padding:0 12px}
+.mob .btn-o{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(10,14,40,.94);display:none;align-items:center;justify-content:center;padding:56px 16px}
+.lb.on{display:flex}
+.lb img{max-height:100%;max-width:100%;width:auto;border-radius:3px}
+.lb button{position:absolute;background:transparent;border:0;color:#fff;cursor:pointer;font:600 15px "Archivo",sans-serif;padding:14px}
+.lb .x{top:6px;right:8px;font-size:30px;line-height:1}
+.lb .p{left:4px;top:50%;transform:translateY(-50%)}.lb .n{right:4px;top:50%;transform:translateY(-50%)}
+.lb .p svg,.lb .n svg{width:30px;height:20px}
+
+/* wylinka badge */
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+/* responsywnosc */
+@media (max-width:1180px){.top .btn{display:none}.nav{gap:20px}}
+@media (max-width:980px){
+  .nav{position:fixed;top:var(--hh);left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:8px 24px 24px;border-bottom:1px solid #E3E5EE;box-shadow:0 18px 30px rgba(20,26,58,.12);transform:translateY(-8px);opacity:0;visibility:hidden;transition:all .2s}
+  .open .nav{transform:none;opacity:1;visibility:visible}
+  .nav a{padding:15px 0;border-bottom:1px solid #EEF0F5;font-size:17px}
+  .nav a::after{display:none}
+  .top .tel{display:none}
+  .telbtn{display:flex;margin-left:auto;width:46px;height:46px;border-radius:4px;background:var(--navy);color:#fff;align-items:center;justify-content:center}
+  .burger{display:flex}
+  .wyn,.kon,.fir{grid-template-columns:minmax(0,1fr)}
+  .st-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--hh:64px;--wrap:calc(100% - 32px)}
+  body{font-size:16px}
+  .logo img{height:48px}
+  .hero{flex-direction:column;align-items:stretch;background:#fff}
+  .hero-foto{position:relative;inset:auto;flex:1 1 0;min-height:min(50vw,25svh);max-height:52svh;align-self:stretch;width:100%}
+  .hero-foto img{position:absolute;inset:0;object-position:50% 70%}
+  .hero-foto::after{background:linear-gradient(0deg,rgba(17,23,66,.25),rgba(17,23,66,0) 40%)}
+  .dach{top:auto;bottom:-1px;height:40px}
+  .hero-in{flex:0 0 auto;padding:4px 0 calc(16px + 1.5svh)}
+  .hero h1{color:var(--ink);font-size:clamp(38px,min(11.4vw,6.6svh),52px)}
+  .hero .lead{color:var(--txt);font-size:clamp(15.5px,2.25svh,17px);margin:12px 0 26px}
+  .hero .info{color:var(--mut);font-size:14px;margin-top:14px}
+  .hero .btn-w{background:var(--navy);color:#fff;width:100%}
+  .cennik thead{display:none}
+  .cennik,.cennik tbody,.cennik tr,.cennik td{display:block;width:100%}
+  .cennik tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px 6px;padding:16px 0;border-bottom:1px solid #E1E3EC}
+  .cennik td{border:0;padding:0;text-align:left;font-size:15px}
+  .cennik td:first-child{grid-column:1/-1;margin-bottom:8px}
+  .cennik td::before{content:attr(data-l);display:block;font-size:12px;color:var(--mut);font-weight:400}
+  .cennik td:first-child::before{display:none}
+  .prz{grid-template-columns:minmax(0,1fr)}
+  .smugi{width:300px;top:40px;right:-90px;opacity:.35}
+  .gal-top{flex-direction:column;align-items:flex-start}
+  .strz{display:none}
+  .pas{margin-right:-16px;padding-right:16px}
+  .pas button{height:230px}
+  .pola{grid-template-columns:minmax(0,1fr)}
+  .kluby img{height:96px}
+  .st-grid{gap:28px 20px}
+  .st-grid>div:first-child,.st-grid>div:last-child{grid-column:1/-1}
+  .mob{display:flex}
+  .stopka{padding-bottom:96px}
+}
+@media (max-height:820px) and (min-width:761px){.hero h1{font-size:clamp(50px,5.4vw,84px)}.hero .lead{margin:16px 0 26px}.hero-in{padding:40px 0 100px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="JSK UniCar - strona główna"><img src="img/logo.webp" width="600" height="201" alt="JSK UniCar delivery logistyka"></a>
+    <nav class="nav" id="nav" aria-label="Menu główne">
+      <a href="#wynajem">Wynajem aut</a>
+      <a href="#przewozy">Przewozy z kierowcą</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#firma">O firmie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+48730222810"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.2 2.5l2.4 3.4-1.6 1.8c.9 2.2 2.6 3.9 4.6 4.9l1.8-1.6 3.4 2.4-1.3 3c-6.6-.4-11.6-5.4-12-12z" fill="currentColor"/></svg>730 222 810</a>
+    <a class="btn btn-n" href="#kontakt">Zapytaj o transport</a>
+    <a class="telbtn" href="tel:+48730222810" aria-label="Zadzwoń: 730 222 810"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.2 2.5l2.4 3.4-1.6 1.8c.9 2.2 2.6 3.9 4.6 4.9l1.8-1.6 3.4 2.4-1.3 3c-6.6-.4-11.6-5.4-12-12z" fill="currentColor"/></svg></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-label="JSK UniCar">
+  <figure class="hero-foto">
+    <picture>
+      <source media="(max-width:760px)" type="image/webp" srcset="img/hero-m-480.webp 480w, img/hero-m-800.webp 800w" sizes="100vw">
+      <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" sizes="100vw" width="2000" height="1125" alt="Samochody JSK UniCar przygotowane do wydania" fetchpriority="high">
+    </picture>
+    <svg class="dach" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 100V74C190 72 360 66 520 52 700 14 880 4 1040 30 1170 50 1310 60 1440 62V100Z" fill="#fff"/>
+      <path class="lin" d="M0 74C190 72 360 66 520 52 700 14 880 4 1040 30 1170 50 1310 60 1440 62"/>
+    </svg>
+  </figure>
+  <div class="hero-in">
+    <div class="hero-txt">
+      <h1>Wynajem aut i przewozy ze Szczecina</h1>
+      <p class="lead">Samochody na doby i miesiące, przewóz serwisantów i pilnych części do portów w całej Europie, wyjazdy firmowe z kierowcą. Szybko, bezpiecznie, na czas.</p>
+      <a class="btn btn-w" id="hero-cta" href="#kontakt">Zapytaj o transport <svg class="str" viewBox="0 0 26 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+      <p class="info">Biuro pn-pt 8:00-16:00, po 16:00 i w weekendy odbiera telefon dyżurny.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="wynajem">
+  <div class="wrap">
+    <div class="glowa">
+      <svg class="kreska" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 15C30 14 46 12 60 8 78 2 96 2 118 9"/></svg>
+      <h2>Wynajem samochodów</h2>
+      <p>Od miejskiego auta na weekend po 9-osobowego busa na wyjazd z ekipą. Im dłużej, tym taniej za dobę.</p>
+    </div>
+    <div class="wyn">
+      <div>
+        <table class="cennik">
+          <thead><tr><th>Samochód</th><th>1-2 dni</th><th>3-7 dni</th><th>7-29 dni</th><th>miesiąc</th></tr></thead>
+          <tbody>
+            <tr><td><b>VW Caravelle</b><small>bus, 9 osób</small></td><td data-l="1-2 dni">209 zł</td><td data-l="3-7 dni">199 zł</td><td data-l="7-29 dni">189 zł</td><td class="m" data-l="miesiąc">4 499 zł</td></tr>
+            <tr><td><b>Hyundai i30</b><small>kombi</small></td><td data-l="1-2 dni">149 zł</td><td data-l="3-7 dni">139 zł</td><td data-l="7-29 dni">139 zł</td><td class="m" data-l="miesiąc">2 399 zł</td></tr>
+            <tr><td><b>Fiat Fiorino</b><small>dostawczy</small></td><td data-l="1-2 dni">109 zł</td><td data-l="3-7 dni">99 zł</td><td data-l="7-29 dni">89 zł</td><td class="m" data-l="miesiąc">1 699 zł</td></tr>
+            <tr><td><b>VW Polo</b><small>osobowy</small></td><td data-l="1-2 dni">99 zł</td><td data-l="3-7 dni">94 zł</td><td data-l="7-29 dni">89 zł</td><td class="m" data-l="miesiąc">1 799 zł</td></tr>
+            <tr><td><b>Skoda Citigo</b><small>miejski</small></td><td data-l="1-2 dni">84 zł</td><td data-l="3-7 dni">79 zł</td><td data-l="7-29 dni">74 zł</td><td class="m" data-l="miesiąc">1 499 zł</td></tr>
+            <tr><td><b>Toyota Aygo</b><small>miejski</small></td><td data-l="1-2 dni">84 zł</td><td data-l="3-7 dni">79 zł</td><td data-l="7-29 dni">74 zł</td><td class="m" data-l="miesiąc">1 499 zł</td></tr>
+          </tbody>
+        </table>
+        <div class="uwagi"><span>Ceny za dobę, brutto.</span><span>Kaucja: <b>1 000 zł</b> osoby prywatne, <b>500 zł</b> firmy.</span></div>
+      </div>
+      <div>
+        <figure class="wyn-foto">
+          <img src="img/caravelle-960.webp" srcset="img/caravelle-480.webp 480w, img/caravelle-960.webp 960w" sizes="(max-width:980px) 100vw, 40vw" width="960" height="542" alt="VW Caravelle z kierowcą" loading="lazy" decoding="async">
+          <figcaption>VW Caravelle - 9 miejsc, na wyjazd firmowy albo z drużyną.</figcaption>
+        </figure>
+        <div class="rez">
+          <p>Rezerwacja auta i dostępność terminów:</p>
+          <a class="btn btn-n" href="tel:+48533444187"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.2 2.5l2.4 3.4-1.6 1.8c.9 2.2 2.6 3.9 4.6 4.9l1.8-1.6 3.4 2.4-1.3 3c-6.6-.4-11.6-5.4-12-12z" fill="currentColor"/></svg>533 444 187</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek ciem" id="przewozy">
+  <svg class="smugi" viewBox="0 0 560 120" aria-hidden="true"><path d="M20 70C160 64 330 62 540 66" stroke-width="5"/><path d="M200 18C320 22 420 40 470 70" stroke-width="5"/><path d="M90 104C240 100 380 100 520 102" stroke-width="2"/></svg>
+  <div class="wrap">
+    <div class="glowa">
+      <svg class="kreska" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 15C30 14 46 12 60 8 78 2 96 2 118 9"/></svg>
+      <h2>Przewozy z kierowcą</h2>
+      <p>Ty zajmujesz się pracą, my drogą. Wozimy ludzi i to, co pilnie musi dotrzeć na miejsce.</p>
+    </div>
+    <div class="prz">
+      <article>
+        <figure><img src="img/kodiaq-960.webp" srcset="img/kodiaq-480.webp 480w, img/kodiaq-640.webp 640w, img/kodiaq-960.webp 960w" sizes="(max-width:760px) calc(100vw - 32px), 600px" width="960" height="720" alt="Skoda Kodiaq do wyjazdów serwisowych" loading="lazy" decoding="async"></figure>
+        <h3>Wyjazdy serwisowe</h3>
+        <p>Dowozimy serwisantów do portów w całej Europie i przewozimy części zapasowe pilnie potrzebne do wykonania usługi serwisowej. Szybko, bezpiecznie, na czas.</p>
+      </article>
+      <article>
+        <figure><img src="img/rapid-960.webp" srcset="img/rapid-480.webp 480w, img/rapid-640.webp 640w, img/rapid-960.webp 960w" sizes="(max-width:760px) calc(100vw - 32px), 600px" width="960" height="720" alt="Skoda Rapid do wyjazdów firmowych" loading="lazy" decoding="async"></figure>
+        <h3>Wyjazdy firmowe</h3>
+        <p>Delegacje służbowe i wyjazdy na targi wygodnymi samochodami z kierowcą. Na życzenie rezerwujemy też miejsca w hotelach. Bez punktów karnych i bez alkomatu - pełen luz, zero stresu.</p>
+      </article>
+    </div>
+    <div class="doba">
+      <p>Jesteśmy do dyspozycji 24 h na dobę.<span>Po 16:00 i w weekendy dzwoń na telefon dyżurny.</span></p>
+      <a class="btn btn-w" href="tel:+48730222810"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.2 2.5l2.4 3.4-1.6 1.8c.9 2.2 2.6 3.9 4.6 4.9l1.8-1.6 3.4 2.4-1.3 3c-6.6-.4-11.6-5.4-12-12z" fill="currentColor"/></svg>730 222 810</a>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-g" id="galeria">
+  <div class="wrap">
+    <div class="gal-top">
+      <div class="glowa">
+        <svg class="kreska" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 15C30 14 46 12 60 8 78 2 96 2 118 9"/></svg>
+        <h2>Nasze auta w trasie</h2>
+        <p>Samochody osobowe, dostawcze i busy, także oklejone w barwach klientów.</p>
+      </div>
+      <div class="strz">
+        <button type="button" id="gp" aria-label="Poprzednie zdjęcia"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M22 7H3M8 1L2 7l6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button type="button" id="gn" aria-label="Następne zdjęcia"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h19M14 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
+    <div class="pas" id="pas">
+      <button type="button" data-big="img/aygo-szereg-960.webp"><img src="img/aygo-szereg-480.webp" srcset="img/aygo-szereg-480.webp 480w, img/aygo-szereg-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="270" alt="Szereg aut Toyota Aygo" loading="lazy"></button>
+      <button type="button" data-big="img/caravelle-960.webp"><img src="img/caravelle-480.webp" srcset="img/caravelle-480.webp 480w, img/caravelle-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="271" alt="VW Caravelle z kierowcą" loading="lazy"></button>
+      <button type="button" data-big="img/aygo-kfc-960.webp"><img src="img/aygo-kfc-480.webp" srcset="img/aygo-kfc-480.webp 480w, img/aygo-kfc-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="270" alt="Toyota Aygo oklejona do dostaw" loading="lazy"></button>
+      <button type="button" data-big="img/kodiaq2-960.webp"><img src="img/kodiaq2-480.webp" srcset="img/kodiaq2-480.webp 480w, img/kodiaq2-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="360" alt="Skoda Kodiaq" loading="lazy"></button>
+      <button type="button" data-big="img/citigo-960.webp"><img src="img/citigo-480.webp" srcset="img/citigo-480.webp 480w, img/citigo-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="395" alt="Skoda Citigo w barwach klienta" loading="lazy"></button>
+      <button type="button" data-big="img/sprinter-960.webp"><img src="img/sprinter-480.webp" srcset="img/sprinter-480.webp 480w, img/sprinter-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="640" alt="Mercedes Sprinter" loading="lazy"></button>
+      <button type="button" data-big="img/aygo-northfish-960.webp"><img src="img/aygo-northfish-480.webp" srcset="img/aygo-northfish-480.webp 480w, img/aygo-northfish-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="267" alt="Toyota Aygo w barwach klienta" loading="lazy"></button>
+      <button type="button" data-big="img/aygo-pizza-960.webp"><img src="img/aygo-pizza-480.webp" srcset="img/aygo-pizza-480.webp 480w, img/aygo-pizza-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="270" alt="Toyota Aygo oklejona do dostaw" loading="lazy"></button>
+      <button type="button" data-big="img/citigo-berlin-960.webp"><img src="img/citigo-berlin-480.webp" srcset="img/citigo-berlin-480.webp 480w, img/citigo-berlin-960.webp 960w" sizes="(max-width:760px) 420px, 660px" width="480" height="360" alt="Skoda Citigo w barwach klienta" loading="lazy"></button>
+    </div>
+    <p class="gal-p">Kliknij zdjęcie, aby je powiększyć. Przesuwaj palcem albo myszą.</p>
+  </div>
+</section>
+
+<section class="sek" id="kontakt">
+  <div class="wrap kon">
+    <div>
+      <div class="glowa">
+        <svg class="kreska" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 15C30 14 46 12 60 8 78 2 96 2 118 9"/></svg>
+        <h2>Zapytaj o transport</h2>
+        <p>Napisz, skąd i dokąd, kiedy i ile osób albo jakie auto Cię interesuje. Odpowiemy z wyceną.</p>
+      </div>
+      <div class="dane">
+        <dl>
+          <div><dt>Biuro i telefon dyżurny</dt><dd><a class="duzy" href="tel:+48730222810">730 222 810</a><small>biuro pn-pt 8:00-16:00, po 16:00 i w weekendy dyżur</small></dd></div>
+          <div><dt>Wynajem samochodów</dt><dd><a href="tel:+48533444187">533 444 187</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:biuro@unicar.pl">biuro@unicar.pl</a></dd></div>
+          <div><dt>Siedziba</dt><dd>ul. Cyraneczki 8, 71-696 Szczecin</dd></div>
+        </dl>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate>
+      <h3>Formularz zapytania</h3>
+      <p>Wypełnienie zajmuje minutę.</p>
+      <div class="pola">
+        <div class="pole c"><label>Czego dotyczy zapytanie?</label>
+          <div class="typ" role="radiogroup">
+            <label><input type="radio" name="typ" value="wynajem" checked><span>Wynajem auta</span></label>
+            <label><input type="radio" name="typ" value="serwis"><span>Wyjazd serwisowy</span></label>
+            <label><input type="radio" name="typ" value="firma"><span>Wyjazd firmowy</span></label>
+            <label><input type="radio" name="typ" value="inne"><span>Inny przewóz</span></label>
+          </div>
+        </div>
+        <div class="pole"><label for="f-skad">Skąd</label><input id="f-skad" type="text" placeholder="np. Szczecin"></div>
+        <div class="pole"><label for="f-dokad">Dokąd</label><input id="f-dokad" type="text" placeholder="np. port w Rotterdamie"></div>
+        <div class="pole"><label for="f-termin">Termin</label><input id="f-termin" type="date"></div>
+        <div class="pole"><label for="f-os">Liczba osób / auto</label><input id="f-os" type="text" placeholder="np. 3 osoby, bus"></div>
+        <div class="pole"><label for="f-imie">Imię i nazwisko lub firma</label><input id="f-imie" type="text" autocomplete="name"></div>
+        <div class="pole"><label for="f-tel">Telefon</label><input id="f-tel" type="tel" autocomplete="tel" inputmode="tel"></div>
+        <div class="pole c"><label for="f-mail">E-mail</label><input id="f-mail" type="email" autocomplete="email"></div>
+        <div class="pole c"><label for="f-msg">Wiadomość</label><textarea id="f-msg" placeholder="Dodatkowe informacje, np. godzina wyjazdu, bagaż, faktura na firmę"></textarea></div>
+        <label class="zgoda"><input type="checkbox" id="f-zg"><span>Wyrażam zgodę na kontakt w sprawie zapytania. Administratorem danych jest JSK UniCar Logistyk Sp. z o.o.</span></label>
+        <button class="btn btn-n" type="submit">Wyślij zapytanie <svg class="str" viewBox="0 0 26 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+      <p class="ok" id="ok" role="status">To podgląd strony - formularz niczego nie wysyła. Na gotowej stronie zapytanie trafi od razu na biuro@unicar.pl, a klient dostanie potwierdzenie.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sek sek-g" id="firma">
+  <div class="wrap">
+    <div class="fir">
+      <div>
+        <svg class="kreska" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 15C30 14 46 12 60 8 78 2 96 2 118 9"/></svg>
+        <h2>O firmie</h2>
+        <p style="margin-top:16px;font-size:18px;color:var(--mut)">JSK UniCar Logistyk to szczecińska spółka transportowa, działająca od 2013 roku. Wynajmujemy samochody i wozimy ludzi oraz ładunki w Polsce i za granicą.</p>
+        <dl class="fir-dane">
+          <dt>Firma</dt><dd>JSK UniCar Logistyk Sp. z o.o.</dd>
+          <dt>NIP</dt><dd>853-151-80-24</dd>
+          <dt>REGON</dt><dd>321436921</dd>
+          <dt>KRS</dt><dd>0000479552</dd>
+        </dl>
+      </div>
+      <div class="sport">
+        <h3>Wspieramy sport</h3>
+        <p style="margin-top:10px">Jesteśmy sponsorem szczecińskiego Hutnika - klubu i jego akademii piłkarskiej.</p>
+        <div class="kluby">
+          <a href="http://www.hutnik.szczecin.pl/" rel="noopener" target="_blank"><img src="img/app.webp" width="170" height="173" alt="Akademia Piłkarska Hutnik Szczecin" loading="lazy"></a>
+          <a href="http://www.hutnik.szczecin.pl/" rel="noopener" target="_blank"><img src="img/hut.webp" width="257" height="175" alt="OKS Hutnik Szczecin" loading="lazy"></a>
+        </div>
+      </div>
+    </div>
+    <div class="mapa" id="mapa" data-src="https://www.google.com/maps?q=ul.+Cyraneczki+8,+71-696+Szczecin&amp;output=embed"><div class="ph">Mapa dojazdu</div></div>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div class="st-grid">
+      <div>
+        <img src="img/logo-white.webp" width="600" height="201" alt="JSK UniCar" loading="lazy">
+        <p>Wynajem samochodów i przewozy z kierowcą. Szczecin, Polska i Europa.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+48730222810">730 222 810</a></li>
+          <li><a href="tel:+48533444187">533 444 187</a> (wynajem)</li>
+          <li><a href="mailto:biuro@unicar.pl">biuro@unicar.pl</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Na skróty</h4>
+        <ul>
+          <li><a href="#wynajem">Wynajem aut</a></li>
+          <li><a href="#przewozy">Przewozy z kierowcą</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dane firmy</h4>
+        <p>JSK UniCar Logistyk Sp. z o.o.</p>
+        <p>ul. Cyraneczki 8, 71-696 Szczecin</p>
+        <p>NIP 853-151-80-24, KRS 0000479552</p>
+      </div>
+    </div>
+    <div class="st-dol">
+      <span>© 2026 JSK UniCar Logistyk Sp. z o.o. Podgląd koncepcji strony.</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=unicar.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mob" id="mob">
+  <a class="btn btn-o" href="tel:+48730222810">Zadzwoń</a>
+  <a class="btn btn-n" href="#kontakt">Zapytaj o transport</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <button class="x" type="button" aria-label="Zamknij">&times;</button>
+  <button class="p" type="button" aria-label="Poprzednie"><svg viewBox="0 0 22 14"><path d="M22 7H3M8 1L2 7l6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <img id="lbimg" alt="">
+  <button class="n" type="button" aria-label="Następne"><svg viewBox="0 0 22 14"><path d="M0 7h19M14 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+</div>
+
+<script>
+(function(){
+var top=document.getElementById('top'),bur=document.getElementById('burger');
+bur.addEventListener('click',function(){var o=top.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){top.classList.remove('open');bur.setAttribute('aria-expanded','false')})});
+var mob=document.getElementById('mob'),cta=document.getElementById('hero-cta');
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(e){var r=e[0];mob.classList.toggle('widac',!r.isIntersecting&&r.boundingClientRect.top<0)}).observe(cta);
+  var secs=['wynajem','przewozy','galeria','firma','kontakt'].map(function(i){return document.getElementById(i)});
+  var links={};document.querySelectorAll('.nav a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){for(var k in links)links[k].classList.remove('on');if(links[e.target.id])links[e.target.id].classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){io.observe(s)});
+  var m=document.getElementById('mapa');
+  new IntersectionObserver(function(e,o){if(e[0].isIntersecting){var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title='Mapa dojazdu - JSK UniCar';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';m.appendChild(f);o.disconnect()}},{rootMargin:'300px'}).observe(m);
+}
+/* galeria: przeciaganie mysza + strzalki */
+var pas=document.getElementById('pas'),down=false,sx=0,sl=0,moved=false;
+pas.addEventListener('mousedown',function(e){down=true;moved=false;sx=e.pageX;sl=pas.scrollLeft;pas.classList.add('drag')});
+window.addEventListener('mouseup',function(){if(down){down=false;pas.classList.remove('drag')}});
+pas.addEventListener('mousemove',function(e){if(!down)return;var d=e.pageX-sx;if(Math.abs(d)>5)moved=true;pas.scrollLeft=sl-d});
+function krok(){return Math.max(260,pas.clientWidth*0.7)}
+document.getElementById('gp').onclick=function(){pas.scrollBy({left:-krok(),behavior:'smooth'})};
+document.getElementById('gn').onclick=function(){pas.scrollBy({left:krok(),behavior:'smooth'})};
+/* lightbox */
+var bts=[].slice.call(pas.querySelectorAll('button')),lb=document.getElementById('lb'),li=document.getElementById('lbimg'),cur=0;
+function show(i){cur=(i+bts.length)%bts.length;li.src=bts[cur].getAttribute('data-big');li.alt=bts[cur].querySelector('img').alt;lb.classList.add('on')}
+bts.forEach(function(b,i){b.addEventListener('click',function(e){if(moved){e.preventDefault();return}show(i)})});
+lb.querySelector('.x').onclick=function(){lb.classList.remove('on')};
+lb.querySelector('.p').onclick=function(e){e.stopPropagation();show(cur-1)};
+lb.querySelector('.n').onclick=function(e){e.stopPropagation();show(cur+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+var tx=0;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1))});
+/* formularz pokazowy */
+document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').classList.add('on')});
+})();
+</script>
+</body>
+</html>
